@@ -16,6 +16,10 @@ Integration:
     API Communication: Frontend communicates with the FastAPI backend to fetch status updates and control crawling tasks.
 ```
 
+## Pre-requisites
+- Install Node.js version 20.17.0
+- Start server before running FE side
+
 ## Getting Started
 First, run the development server:
 
