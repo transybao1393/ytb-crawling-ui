@@ -1,0 +1,59 @@
+/* styles/Crawling.module.css */
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.progressContainer {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.progressList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.progressItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.videoUrl {
+  font-size: 1rem;
+  color: #333;
+  flex: 1; /* Make sure the URL takes up space */
+  margin-right: 10px; /* Add some space between URL and status */
+}
+
+.videoStatus {
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Status colors */
+.status-crawling {
+  background-color: #ffcc00; /* Yellow for crawling */
+}
+
+.status-crawled {
+  background-color: #4caf50; /* Green for crawled */
+}
+
+.status-error {
+  background-color: #f44336; /* Red for error */
+}

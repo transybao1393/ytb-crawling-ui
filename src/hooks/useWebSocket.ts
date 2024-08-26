@@ -13,9 +13,8 @@ export function useWebSocket(url: string) {
     };
 
     ws.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-     
-      console.log("reason", data)
+      const data = event.data
+      console.log("reason for data =>>>>", data)
       setMessages(data);
     };
 
