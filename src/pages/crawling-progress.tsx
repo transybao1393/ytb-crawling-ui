@@ -2,6 +2,7 @@
 import { useWebSocket } from '../hooks/useWebSocket';
 import { useState, useEffect } from 'react';
 import styles from '../styles/Crawling.module.css';
+import Link from 'next/link';
 
 // Function to extract video ID from a YouTube URL
 const extractVideoId = (url: string): string | null => {
@@ -29,7 +30,7 @@ const CrawlingProgress = () => {
       const progressUpdates = parsedUrls.map((url: string) => ({
         id: extractVideoId(url),
         url: url,
-        status: 'crawling',
+        status: 'In Progress',
       }));
 
       setProgress(progressUpdates);
@@ -41,7 +42,7 @@ const CrawlingProgress = () => {
     if (messages) {
       const updatedProgress = progress.map((item) => {
         if (messages.includes(item.id || '')) {
-          return { ...item, status: 'crawled' };
+          return { ...item, status: 'Done' };
         }
         return item;
       });
@@ -65,6 +66,7 @@ const CrawlingProgress = () => {
             </li>
           ))}
         </ul>
+        <Link href="/" className={styles.backButton}>Back to Home</Link>
       </div>
     </div>
   );
