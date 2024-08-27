@@ -40,3 +40,9 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Crawling Progress
+Here is a screenshot of the Crawling Progress page:
+- View and monitor the progress of crawling workers (how many videos are in progress).
+![crawling-progress-page](crawling-progress-page.png)
