@@ -1,75 +1,93 @@
-/* styles/Crawling.module.css */
+/* Container for the whole page */
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading style */
 .heading {
   font-size: 2rem;
+  font-weight: bold;
+  color: #333;
   margin-bottom: 20px;
 }
 
-.progressContainer {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.progressList {
-  list-style-type: none;
-  padding: 0;
-}
-
-.progressItem {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  align-items: center;
-}
-
-.videoUrl {
-  font-size: 1rem;
-  color: #333;
-  flex: 1; /* Make sure the URL takes up space */
-  margin-right: 10px; /* Add some space between URL and status */
-}
-
-.videoStatus {
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
-  padding: 4px 8px;
-  color: #fff;
-  text-align: center;
-}
-
-/* Status colors */
-.status-crawling {
-  background-color: #ffcc00; /* Yellow for crawling */
-}
-
-.status-crawled {
-  background-color: #4caf50; /* Green for crawled */
-}
-
-.status-error {
-  background-color: #f44336; /* Red for error */
-}
-
+/* Style for the back button */
 .backButton {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #0070f3;
   color: white;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .backButton:hover {
   background-color: #005bb5;
+}
+
+/* Container for the progress list */
+.progressContainer {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header style inside progress container */
+.progressContainer h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* List of progress items */
+.progressList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual progress item */
+.progressItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.progressItem:last-child {
+  border-bottom: none;
+}
+
+/* Style for the video URL */
+.videoUrl {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Status styles */
+.videoStatus {
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.status-In\ Progress {
+  background-color: #ff9800; /* Orange */
+}
+
+.status-Done {
+  background-color: #4caf50; /* Green */
 }

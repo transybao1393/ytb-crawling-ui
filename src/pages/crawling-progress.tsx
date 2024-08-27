@@ -54,6 +54,7 @@ const CrawlingProgress = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Crawling Progress</h1>
+      <Link href="/" className={styles.backButton}>Back to Home</Link>
       <div className={styles.progressContainer}>
         <h2 className="text-2xl font-semibold mb-4">Progress ({urls.length})</h2>
         <ul className={styles.progressList}>
@@ -66,7 +67,6 @@ const CrawlingProgress = () => {
             </li>
           ))}
         </ul>
-        <Link href="/" className={styles.backButton}>Back to Home</Link>
       </div>
     </div>
   );
